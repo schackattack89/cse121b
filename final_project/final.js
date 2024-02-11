@@ -41,7 +41,7 @@ const displayWeather = (data) => {
         const windElement = document.querySelector("#wind");
         cityElement.textContent = `Weather for ${data['name']}`;
         tempElement.textContent = `${Math.floor(data['main']['temp'])}°F`;
-        const iconUrl = "http://openweathermap.org/img/w/"+data['weather'][0]['icon']+".png";
+        const iconUrl = "https://openweathermap.org/img/w/"+data['weather'][0]['icon']+".png";
         iconElement.src = iconUrl;
         const description = data['weather'][0]['description'];
         const captDescription = description[0].toUpperCase() + description.substring(1); 
@@ -58,22 +58,22 @@ function switchBackground(data) {
     console.log(currentCondition);
     switch(currentCondition){
         case 'Snow':
-            document.body.style.backgroundImage = "images/snow.jpg";
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/snow.jpg')";
             break;
         case 'Thunderstorm':
-            document.body.style.backgroundImage = "images/storm.jpg";
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/storm.jpg')";
             break;
         case 'Rain':
-            document.body.style.backgroundImage = "images/rain.jpg";
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/rain.jpg')";
             break;
         case 'Clouds':
-            document.body.style.backgroundImage = "images/clouds.jpg";
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/clouds.jpg')";
             break;
         case 'Clear':
-            document.body.style.backgroundImage = "images/sun.jpg";
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/sun.jpg')";
             break;
         default:
-            document.body.style.backgroundImage = "url('https://source.unsplash.com/random/1920x1080/?storms')";
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/nature.jpg')";
     }
     //console.log(currentCondition)
 }
@@ -89,7 +89,7 @@ inputButton.addEventListener("click", () => {       //function on search button 
   let parts = localeInput.split(',');               //breaks city and state apart at common delimiter
   let city = parts[0];                              //defines first part to city variable
   let state = parts[1];                             //defines second part to state variable
-  let cityStateData = "http://api.openweathermap.org/geo/1.0/direct?q="+city+","+state+",usa&limit=1&appid="+apiKey;      //creates input string for getLatLon function from user entered city/state
+  let cityStateData = "https://api.openweathermap.org/geo/1.0/direct?q="+city+","+state+",usa&limit=1&appid="+apiKey;      //creates input string for getLatLon function from user entered city/state
   getLatLon(cityStateData);                            //calls function to get location data for user entry (city/state)
   switchBackground(weatherList);
 });
@@ -101,7 +101,7 @@ inputText.addEventListener("keypress", function(e) {
         let parts = localeInput.split(',');               
         let city = parts[0];                              
         let state = parts[1];                             
-        let cityStateData = "http://api.openweathermap.org/geo/1.0/direct?q="+city+","+state+",usa&limit=1&appid="+apiKey;
+        let cityStateData = "https://api.openweathermap.org/geo/1.0/direct?q="+city+","+state+",usa&limit=1&appid="+apiKey;
         getLatLon(cityStateData);   
     }                            
 });
