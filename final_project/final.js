@@ -58,28 +58,22 @@ function switchBackground(data) {
     console.log(currentCondition);
     switch(currentCondition){
         case 'Snow':
-            // document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/snow.jpg')";
-            document.body.style.backgroundImage = url("projectImages/snow.jpg");
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/snow.jpg')";
             break;
         case 'Thunderstorm':
-            // document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/storm.jpg')";
-            document.body.style.backgroundImage = url("projectImages/storm.jpg");
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/storm.jpg')";
             break;
         case 'Rain':
-            // document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/rain.jpg')";
-            document.body.style.backgroundImage = url("projectImages/rain.jpg");
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/rain.jpg')";
             break;
         case 'Clouds':
-            // document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/clouds.jpg')";
-            document.body.style.backgroundImage = url("projectImages/clouds.jpg");
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/clouds.jpg')";
             break;
         case 'Clear':
-            // document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/sun.jpg')";
-            document.body.style.backgroundImage = url("projectImages/sun.jpg");
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/sun.jpg')";
             break;
         default:
-            // document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/nature.jpg')";
-            document.body.style.backgroundImage = url("projectImages/nature.jpg");
+            document.body.style.backgroundImage = "url('https://schackattack89.github.io/cse121b/final_project/images/nature.jpg')";
     }
     //console.log(currentCondition)
 }
